@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{f9bc370a-d6bb-45fb-83e8-160605484571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Controls">
+      <UniqueIdentifier>{c9adad6f-55d5-453f-b7e9-acbae7502e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{4a991d3e-380f-4666-a337-3063ccac1e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{51088833-4b56-458e-97aa-aced7790e676}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\LS_Monitor.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\LS_Monitor.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LS_Monitor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorListCtrl.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorTabCtrl.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ZoneDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="LS_MonitorDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="OScopeCtrl.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="WinMessage.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerTypes.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\SP2Packet.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="IOSocket.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="ioHashString.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Packet.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="IOSecurity.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\FSM.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\cryption.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\md5.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CSDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelDialog.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessCtrl.h">
+      <Filter>UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="AnnounceDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Protocol.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="OperatorDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="EventDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="AuthDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="cFile.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="LogDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="NoticeDlg.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="SecretShopDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CompensationDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LS_Monitor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorListCtrl.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorTabCtrl.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="ZoneDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="LS_MonitorDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="OScopeCtrl.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\SP2Packet.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="IOSocket.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="ioHashString.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Packet.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="IOSecurity.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\FSM.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\cryption.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\md5.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CSDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelDialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessCtrl.cpp">
+      <Filter>UI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="AnnounceDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="EventDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="cFile.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="LogDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="NoticeDlg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SecretShopDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CompensationDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LS_Monitor.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
