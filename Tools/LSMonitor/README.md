@@ -22,7 +22,11 @@ An Admin tools to manage game server from remote
 
 ## Configure
 
-- Edit "main" key in config.ini, match your Mainserver IP & Port and auth.ini in MainServer
+- Edit "main" key in config.ini inside folder Bin, match your Mainserver IP & Port and auth.ini in MainServer
+
+## Guide
+
+Replace to LS Source dir (src/extra/)
 
 ## License
 
