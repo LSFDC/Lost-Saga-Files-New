@@ -12,4 +12,5 @@ TODO:
 ### Tools
 
 🔗 [Lost Saga Monitor (Admin Tools)](Tools/LSMonitor/)
-🔗 [LSWebbroker (Launchere)](Tools/LSWebBroker/)
+
+🔗 [LSWebbroker (Launcher)](Tools/LSWebBroker/)
