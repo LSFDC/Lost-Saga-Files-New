@@ -11,4 +11,4 @@ TODO:
 
 ### Tools
 
-🔗 [Lost Saga Monitor](Tools/LSMonitor/)
+🔗 [Lost Saga Monitor (Admin Tools)](Tools/LSMonitor/)
