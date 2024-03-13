@@ -1,5 +1,5 @@
-# Lost Saga Server
-Repository files for Lost Saga Private Server
+# New Lost Saga  Files
+Repository files related to Newest Lost Saga Patch
 
 ## Table Of Content
 
