@@ -1,2 +1,2 @@
 # Lost-Saga-Server
-Client files related to korean patch.
+Client files for Lost Saga Private Server following korean patch.
