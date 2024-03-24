@@ -1,2 +1,2 @@
 # Lost-Saga-Server
-Server files for Lost Saga Private Server Following LSFD Patch
+Server files Following LSFD Patch

@@ -1,0 +1,32 @@
+{
+  "name": "losa-api",
+  "version": "1.0.0",
+  "description": "RESTful API for Lost Saga",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Lostsaga"
+  ],
+  "author": "Bangbokir",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/ua-parser-js": "^0.7.39",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "ua-parser-js": "^1.0.37",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "prisma": "^5.11.0",
+    "typescript": "^5.4.2"
+  }
+}

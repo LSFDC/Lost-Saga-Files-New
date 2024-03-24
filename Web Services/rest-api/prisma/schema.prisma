@@ -1,0 +1,196 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model define_launcher_info {
+  launcherKey String   @db.Char(50)
+  status      Int      @default(0) @db.TinyInt
+  regDate     DateTime @default(now()) @db.DateTime
+
+  @@unique([launcherKey])
+}
+
+model define_hwid_blocklist {
+  hwid String @db.VarChar(50)
+
+  @@id([hwid])
+  @@unique([hwid])
+}
+
+model define_launcher_whitelist {
+  username String @db.VarChar(50)
+
+  @@unique([username])
+}
+
+model userMemberDB {
+  accountIDX   Int                 @unique @default(autoincrement())
+  userID       String              @db.VarChar(50)
+  nickName     String              @db.VarChar(50)
+  userPWD      String              @db.VarChar(255)
+  email        String              @db.VarChar(50)
+  mailling     Int                 @default(0) @db.TinyInt
+  userType     Int                 @default(100) @db.SmallInt
+  joinType     Int                 @default(10) @db.SmallInt
+  eventType    Int                 @default(0) @db.Int
+  cpType       Int                 @default(0) @db.SmallInt
+  limitType    Int                 @default(0) @db.SmallInt
+  limitDate    DateTime            @default("1900-01-01T00:00:00.000Z") @db.DateTime
+  trackingcode Int                 @default(0) @db.Int
+  regDate      DateTime            @default(now()) @db.DateTime
+  makeType     Int                 @default(0) @db.TinyInt
+  userinfo     userInfoDB?
+  cashinfo     userCashDB?
+  logininfo    userLoginDB?
+  gameinfo     userGameDB?
+  battlerecord userRecordBattleDB?
+  vipinfo      userVIPDB?
+
+  @@id([userID])
+  @@unique([accountIDX, userID])
+}
+
+model userInfoDB {
+  accountIDX  Int          @default(autoincrement())
+  visit_count Int          @default(0)
+  checkDate   DateTime     @default(now()) @db.DateTime
+  rec_index   Int          @default(0)
+  rec_inc     Int          @default(0)
+  rec_dec     Int          @default(0)
+  cnnDate     DateTime     @default("1900-01-01T00:00:00.000Z") @db.DateTime
+  clickDate   DateTime     @default("1900-01-01T00:00:00.000Z") @db.DateTime
+  userIP      String       @db.VarChar(20)
+  regDate     DateTime     @default(now()) @db.DateTime
+  user        userMemberDB @relation(fields: [accountIDX], references: [accountIDX])
+
+  @@id([accountIDX])
+  @@unique([accountIDX])
+}
+
+model userCashDB {
+  accountIDX Int          @default(autoincrement())
+  amtCash    Int          @default(0) @db.Int
+  amtBonus   Int          @default(0) @db.Int
+  amtLimit   Int          @default(0) @db.Int
+  amtSum     Int          @default(0) @db.Int
+  chgDate    DateTime     @default("1900-01-01T00:00:00.000Z") @db.DateTime
+  regDate    DateTime     @default(now()) @db.DateTime
+  user       userMemberDB @relation(fields: [accountIDX], references: [accountIDX])
+
+  @@id([accountIDX])
+  @@unique([accountIDX])
+}
+
+model userRecordBattleDB {
+  accountIDX  Int @default(autoincrement())
+  type1_win   Int @default(0) @db.Int
+  type1_lose  Int @default(0) @db.Int
+  type1_kill  Int @default(0) @db.Int
+  type1_death Int @default(0) @db.Int
+  type2_win   Int @default(0) @db.Int
+  type2_lose  Int @default(0) @db.Int
+  type2_kill  Int @default(0) @db.Int
+  type2_death Int @default(0) @db.Int
+  type3_win   Int @default(0) @db.Int
+  type3_lose  Int @default(0) @db.Int
+  type3_kill  Int @default(0) @db.Int
+  type3_death Int @default(0) @db.Int
+  type4_win   Int @default(0) @db.Int
+  type4_lose  Int @default(0) @db.Int
+  type4_kill  Int @default(0) @db.Int
+  type4_death Int @default(0) @db.Int
+
+  regDate DateTime     @default(now()) @db.DateTime
+  user    userMemberDB @relation(fields: [accountIDX], references: [accountIDX])
+
+  @@id([accountIDX])
+  @@unique([accountIDX])
+}
+
+model userGameDB {
+  accountIDX          Int          @default(autoincrement())
+  userState           Int          @default(0) @db.Int
+  gameMoney           BigInt       @default(0) @db.BigInt
+  playTime            Int          @default(0) @db.Int
+  conn_count          Int          @default(0) @db.Int
+  userLevel           Int          @default(0) @db.Int
+  userEXP             Int          @default(0) @db.Int
+  userFishingLevel    Int          @default(0) @db.Int
+  userFishingEXP      Int          @default(0) @db.Int
+  userExcavationLevel Int          @default(0) @db.Int
+  userExcavationEXP   Int          @default(0) @db.Int
+  userHerocEXP        Int          @default(0) @db.Int
+  userHerosEXP        Int          @default(0) @db.Int
+  rencpoint           Int          @default(0) @db.Int
+  renspoint           Int          @default(0) @db.Int
+  relateLevel         Int          @default(0) @db.Int
+  regionType          Int          @default(0) @db.Int
+  refillData          Int          @default(0) @db.Int
+  connDate            DateTime     @default("1900-01-01T00:00:00.000Z") @db.DateTime
+  regDate             DateTime     @default(now()) @db.DateTime
+  Practice            Int          @default(0) @db.SmallInt
+  user                userMemberDB @relation(fields: [accountIDX], references: [accountIDX])
+
+  @@id([accountIDX])
+  @@unique([accountIDX])
+}
+
+model userLoginDB {
+  accountIDX   Int          @default(autoincrement())
+  encodeKey    String       @db.Char(15)
+  gameServerID Int          @default(0) @db.Int
+  userIP       String?      @db.VarChar(15)
+  connDate     DateTime     @default("1900-01-01T00:00:00.000Z") @db.DateTime
+  user         userMemberDB @relation(fields: [accountIDX], references: [accountIDX])
+
+  @@id([accountIDX])
+  @@unique([accountIDX])
+}
+
+model userVIPDB {
+  accountIDX Int          @default(autoincrement())
+  vipType    Int          @default(0) @db.SmallInt
+  vipStatus  Int          @default(0) @db.SmallInt
+  regDate    DateTime     @default(now()) @db.DateTime
+  endDate    DateTime     @default(now()) @db.DateTime
+  user       userMemberDB @relation(fields: [accountIDX], references: [accountIDX])
+
+  @@id([accountIDX])
+  @@unique([accountIDX])
+}
+
+// server info
+model define_game_server {
+  idx        Int      @default(autoincrement())
+  serverID   BigInt   @default(0) @db.BigInt
+  serverIP   String   @db.VarChar(15)
+  serverPort Int      @default(0) @db.Int
+  serverName String   @db.VarChar(50)
+  clientPort Int      @default(0) @db.Int
+  connNumber Int      @default(0) @db.Int
+  status     Int      @default(0) @db.TinyInt
+  regDate    DateTime @default(now()) @db.DateTime
+
+  @@id([serverID])
+  @@unique([serverID])
+}
+
+model define_encode_key {
+  idx       Int      @default(autoincrement())
+  encodeKey String   @db.Char(15)
+  regDate   DateTime @default(now()) @db.DateTime
+
+  @@id([encodeKey])
+  @@unique([encodeKey])
+}
